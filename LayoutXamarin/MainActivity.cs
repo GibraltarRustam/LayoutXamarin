@@ -28,7 +28,7 @@ namespace LayoutXamarin
             path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "mydb.db3");
             db = new SQLiteConnection(path);
             db.CreateTable<Person>();
-            db.Insert(new Person { LastName = "Виталий", FirstName = "Филин", Specialty = "Информационные системы и программирование", Group = "320", Email = "easychno@aol.com" });
+            //db.Insert(new Person { LastName = "", FirstName = "", Specialty = "Информационные системы и программирование", Group = "320", Email = "" });
 
             students = db.Table<Person>().ToList();
 
