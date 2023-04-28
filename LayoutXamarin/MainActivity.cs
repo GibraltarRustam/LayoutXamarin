@@ -28,7 +28,7 @@ namespace LayoutXamarin
             path = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "mydb.db3");
             db = new SQLiteConnection(path);
             db.CreateTable<Person>();
-            db.Insert(new Person { LastName = "Виталий", FirstName = "Филин", Specialty = "Информационные системы и программирование", Group = "320", Email = "easychno@aol.com" });
+            db.Insert(new Person { LastName = "Даукаев", FirstName = "Булат", Specialty = "Информационные системы и программирование", Group = "320", Email = "dauckaev.bulat@mail.ru" });
 
             students = db.Table<Person>().ToList();
 
@@ -40,7 +40,7 @@ namespace LayoutXamarin
             listView = FindViewById<ListView>(Resource.Id.listView);
             listView.Adapter = adapter;
 
-            var buttonClearDatabase = FindViewById<Button>(Resource.Id.staff);
+            var buttonClearDatabase = FindViewById<Button>(Resource.Id.clear);
             buttonClearDatabase.Click += ButtonClearDatabase_Click;
         }
 
